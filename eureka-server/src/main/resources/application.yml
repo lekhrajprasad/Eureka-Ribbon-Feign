@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: MyEurekaServer
+server:
+    port: 8761
+
+#telling the server not to register himself in the service registry
+eureka:
+  client:
+    register-with-eureka: false
+    fetchRegistry: false
+
+logging:
+    level:
+        root: INFO
+    pattern:
+        console: '%-5level [%thread]-${PID} %logger{36}  - %msg%n'
